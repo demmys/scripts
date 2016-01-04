@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cmd=$1
+function f {
+    eval $cmd
+}
+
+args=()
+while read i
+do
+    args+=($i)
+done
+f ${args[@]}

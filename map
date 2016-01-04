@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cmd=$1
+function f {
+    eval $cmd
+}
+
+while read i
+do
+    f $i
+done

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+base=$1
+cmd=$2
+function f {
+    eval $cmd
+}
+
+while read i
+do
+    base=$(f "$base" "$i")
+done
+echo $base

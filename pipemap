@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while read i
+do
+    cmd=($@)
+    echo $(echo $i | ${cmd[@]})
+done
